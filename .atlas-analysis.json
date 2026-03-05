@@ -1,0 +1,116 @@
+{
+  "projectType": "data-platform",
+  "projectName": "CoW Protocol Solver Rewards",
+  "projectDescription": "Data aggregation and accounting system for calculating and distributing solver rewards and reimbursements across multiple blockchain networks.",
+  "theme": "sequoia",
+  "primaryColor": "#94cb04",
+  "lightColor": "#545454",
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/accounting-periods",
+              "concepts/slippage-accounting",
+              "concepts/reward-mechanism",
+              "concepts/buffer-accounting"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/generating-payouts",
+              "guides/validating-payouts",
+              "guides/running-with-docker",
+              "guides/network-configuration"
+            ]
+          },
+          {
+            "group": "Data & Queries",
+            "pages": [
+              "data/data-sources",
+              "data/dune-integration",
+              "data/database-schema"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Configuration",
+            "pages": [
+              "api/config/network",
+              "api/config/reward-config",
+              "api/config/payment-config",
+              "api/config/accounting-config"
+            ]
+          },
+          {
+            "group": "Data Models",
+            "pages": [
+              "api/models/accounting-period",
+              "api/models/transfer",
+              "api/models/overdraft",
+              "api/models/token"
+            ]
+          },
+          {
+            "group": "Fetchers",
+            "pages": [
+              "api/fetch/transfer-file",
+              "api/fetch/dune",
+              "api/fetch/payouts",
+              "api/fetch/prices"
+            ]
+          },
+          {
+            "group": "Utilities",
+            "pages": [
+              "api/multisend",
+              "api/pg-client",
+              "api/slack-utils"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-chain solver reward calculation",
+    "Automated payout generation via Safe multisend",
+    "Slippage and buffer accounting",
+    "Dune Analytics integration",
+    "PostgreSQL data aggregation",
+    "Token price and exchange rate calculations",
+    "Overdraft management for solvers",
+    "Weekly accounting period processing"
+  ],
+  "publicApiSurface": [
+    "src.fetch.transfer_file (main payout script)",
+    "AccountingConfig.from_network()",
+    "AccountingPeriod",
+    "Transfer",
+    "Overdraft",
+    "DuneFetcher",
+    "MultiInstanceDBFetcher",
+    "construct_payouts()",
+    "post_multisend()",
+    "RewardConfig",
+    "PaymentConfig",
+    "Network enum"
+  ]
+}
